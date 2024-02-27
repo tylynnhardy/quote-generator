@@ -35,6 +35,11 @@ form {
   font-size: 15px;
   font-family: "Noto Serif", serif;
 }
+.examples {
+  padding: 10px;
+  opacity: 0.6;
+  font-size: 14px;
+}
 .quote {
   background-color: white;
   font-size: 18px;
@@ -44,6 +49,9 @@ form {
   border-radius: 10px;
   box-shadow: 5px 5px 8px #757a79;
   font-family: "Noto Serif", serif;
+}
+.hidden {
+  display: none;
 }
 a {
   color: #3baea0;
@@ -60,4 +68,18 @@ p {
 }
 .material-symbols-outlined {
   color: #3baea0;
+}
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

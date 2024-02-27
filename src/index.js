@@ -17,9 +17,13 @@ function generateQuote(event) {
     let context = `You are an expert in all quotes, but especially love heartfelt quotes. Provide short and sweet quotes. Follow the user instuctions.`;
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+    let quoteElement = document.querySelector("#quote");
+    quoteElement.classList.remove("hidden");
+    quoteElement.innerHTML = `<div class="generating">Please wait while your heartfelt quote generates⏳..</div>`;
+
     axios.get(apiUrl).then(displayQuote);
 
 
-}
+} 
 let quoteForm = document.querySelector("#quote-form");
 quoteForm.addEventListener("submit", generateQuote);
